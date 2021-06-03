@@ -1,25 +1,52 @@
-import logo from './logo.svg';
 import './App.css';
 
+// will use this to iterate through different products to show their names and descriptions, etc..
+const product = {
+  1: {
+    id: 1,
+    name: "someProduct1",
+    desc: " blah blah blah"
+  }
+}
+
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <TopNav/>
+      <MainProduct/>
+      <OtherProducts/>
     </div>
   );
+}
+
+// This will be the top middle nav bar that has a position absolute
+function TopNav() {
+
+  return (
+    <div className="navbar">
+      navbar here
+    </div>
+  )
+}
+
+// This will be the main body/product that's being viewed
+function MainProduct() {
+  return (
+    <div className="main-product">
+      main product here
+      {product[1].name}
+    </div>
+  )
+}
+
+// This will be the other products
+function OtherProducts() {
+  return (
+    <div className="other-product">
+      other products list here
+    </div>
+  )
 }
 
 export default App;
