@@ -1,13 +1,12 @@
 import './App.css';
-import React from "react";
-import { Route, Switch } from 'react-router-dom';
-import { HashRouter } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
 
-import Main from './Components/Main_Page/main_page.js'
-import Zoom from './Components/Zoom/zoom.js'
-
+import TopBar from './Components/Top_bar/top_nav.js'
+import TopSection from './Components/Top_Section/top_section.js'
+import BottomSection from './Components/Bottom_Section/bottom_section.js'
 
 // will use this to iterate through different products to show their names and descriptions, etc..
+// thought this way it would be easier to switch out products
 export const PRODUCTS = {
   1: {
     id: 1,
@@ -64,17 +63,33 @@ export const PRODUCTS = {
 export const CART= [];
 
 function App() {
-  // TODO: Add a useState for the cart somewhere
-  return (
-    <div className="App">
-      <HashRouter>
-        <Switch>
-          <Route exact path="/zoom/:id" component={Zoom} />
-          <Route path="/" component={Main} />
-        </Switch>
-      </HashRouter>
-    </div>
-  );
+
+    const mainProductId = PRODUCTS[1].id;
+    const otherProducts = [
+    PRODUCTS[2].id,
+    PRODUCTS[3].id,
+    PRODUCTS[4].id,
+    PRODUCTS[5].id
+  ];
+    // useState hook for the Cart
+    const [cart, setCart] = useState([]);
+
+    // adding items to the cart
+    const addToCart = (productId) => {
+        console.log(productId)
+        const newCart = [...cart, [productId]];
+        console.log(cart)
+        setCart(newCart);
+    }
+
+    return (
+        <div className="app">
+        <TopBar cart={cart}/>
+            MAIN
+        <TopSection id={mainProductId} cart={cart} addToCart={addToCart} />
+        <BottomSection props={otherProducts} />
+        </div>
+    );
 }
 
 export default App;

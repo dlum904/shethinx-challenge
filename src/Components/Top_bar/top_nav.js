@@ -5,7 +5,7 @@ import { PRODUCTS, CART } from '../../App.js'
 export default function Topbar() {
     return (
         <div className="topbar">
-            top bar here
+            top bar here    {CART.length}
         </div>
     )
 }
