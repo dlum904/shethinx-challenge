@@ -47,11 +47,11 @@ export default function TopSection({id, cart, addToCart}) {
                 <div className="product-right">
                     <p>{PRODUCTS[id].price}</p>
                     <div className="color-select">
-                        <div>color</div>
-                        <div onClick={() => selectBlack()}>{color.black}</div>
-                        <div onClick={() => selectBeige()}>{color.beige}</div>
+                        <div className="color">color</div>
+                        <div className="color-black" onClick={() => selectBlack()}>{color.black}</div>
+                        <div className="color-beige" onClick={() => selectBeige()}>{color.beige}</div>
                     </div>
-                    
+
                     <button onClick={() => addToCart(id)}> Add to Cart</button>
                 </div>
 
