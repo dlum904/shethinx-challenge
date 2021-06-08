@@ -1,28 +1,50 @@
+
+/* color selector */
+
 .color-select {
     display: flex;
 }
-
 .color-select div {
     padding: .5rem 1rem .5rem 1.5rem;
     border-top: .01rem solid black;
     border-bottom: .01rem solid black;
     border-right: .01rem solid black;
-    width: 4rem;
+    width: 4.1rem;
 }
-
 .color {
     border-left: .01rem solid black
 }
-
 .color-black {
     background-color: black;
     color: white;
 }
-
 .color-beige {
     background-color: beige;
 }
-
 .color-black:hover, .color-beige:hover {
     cursor: pointer;
+}
+
+/* quantity selector */
+
+.quantity-select {
+    display: flex;
+}
+.minus, .plus {
+    padding: .5rem 1rem .5rem 1rem;
+    border: .01rem solid black;
+    border-radius: 0;
+    width: 2.5rem;
+    background-color: white;
+    
+}
+.minus:hover, .plus:hover {
+    cursor: pointer;
+}
+.quantity-select div {
+    padding: .5rem 1rem .5rem 1rem;
+    border-top: .01rem solid black;
+    border-bottom: .01rem solid black;
+    width: 13rem;
+    text-align: center;
 }
