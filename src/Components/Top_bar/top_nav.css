@@ -1,0 +1,13 @@
+
+.topbar {
+    position: fixed;
+    top: 0px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+/* align-self: auto; */
+}
+
+.top-left a, .top-right a {
+    margin-right: 1rem;
+}

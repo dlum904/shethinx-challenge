@@ -29,7 +29,7 @@ export const PRODUCTS = {
     desc2: "Hiphugger desc here.",
   },
   3: {
-    id: 2,
+    id: 3,
     name: "Thong",
     img: "/assets/bottom section images/thinx_productpage_-05.jpg",
     price: "$35.00",
@@ -60,34 +60,28 @@ export const PRODUCTS = {
   }
 }
 
-export const CART= [];
-
 function App() {
-
     const mainProductId = PRODUCTS[1].id;
-    const otherProducts = [
-    PRODUCTS[2].id,
-    PRODUCTS[3].id,
-    PRODUCTS[4].id,
-    PRODUCTS[5].id
-  ];
+    const otherProductIds = [
+        PRODUCTS[2].id,
+        PRODUCTS[3].id,
+        PRODUCTS[4].id,
+        PRODUCTS[5].id
+    ];
     // useState hook for the Cart
     const [cart, setCart] = useState([]);
 
     // adding items to the cart
     const addToCart = (productId) => {
-        console.log(productId)
         const newCart = [...cart, [productId]];
-        console.log(cart)
         setCart(newCart);
     }
 
     return (
         <div className="app">
         <TopBar cart={cart}/>
-            MAIN
         <TopSection id={mainProductId} cart={cart} addToCart={addToCart} />
-        <BottomSection props={otherProducts} />
+        <BottomSection ids={otherProductIds} />
         </div>
     );
 }
