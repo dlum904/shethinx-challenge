@@ -48,3 +48,48 @@
     width: 13rem;
     text-align: center;
 }
+
+/* SIZE SELECTOR */
+.size-btn {
+    display: flex;
+    width: 17.8rem;
+    border: .01rem solid black;
+    padding: .5rem 1rem .5rem 1rem;
+    justify-content: space-between;
+}
+.size-btn:hover {
+    cursor: pointer;
+}
+.sizeDropdown {
+    position: relative;
+}
+.sizeDropdown ul{
+    z-index: 9;
+    position: absolute;
+    list-style-type: none;
+    margin-top: 0;
+    margin-left: -2.55rem;
+    width: 20rem;
+    
+}
+.dropdown-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+}
+.sizeDropdown ul li {
+    border-bottom: .01rem solid black;
+    border-right: .01rem solid black;
+    border-left: .01rem solid black;
+    padding: .5rem 1rem .5rem 1rem;
+    background-color: white;
+    text-align: center;
+}
+.sizeDropdown ul li:hover {
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
