@@ -8,6 +8,7 @@
     justify-content: space-evenly;
 }
 
-.top-left a, .top-right a {
-    margin-right: 1rem;
+.topbar a {
+    color: black;
+    text-decoration: none;
 }

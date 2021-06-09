@@ -125,10 +125,11 @@ export default function TopSection({id, cart, addToCart}) {
                     ) :
                     null }
                     <br/>
-                    <a className="whatsize" href="/">what's my size?</a>
+                    <div className="whatsize">
+                        <a href="/">what's my size?</a>
+                    </div>
                     <br/>
                     {/* ADD TO CART BTN */}
-                    {/* TODO: add the entire form to the cart */}
                     <input className="cart-btn" type="button" onClick={() => addToCart(form)} value="add to cart"/>
                 </div>
 
