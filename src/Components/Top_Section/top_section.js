@@ -1,5 +1,5 @@
 import './top_section.css';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { PRODUCTS } from '../../App.js'
 
 // This will be the main body/product that's being viewed
@@ -17,6 +17,22 @@ export default function TopSection({id, cart, addToCart}) {
 
     // Hook to show the size dropdown: if set to false, it will not show, if true it will show it
     const [show, setShow] = useState(false);
+
+    // Hook to show what size is currently selected
+    useEffect (() => {
+        const sizes = document.querySelectorAll(".XS, .S, .M, .L, .XL, .XXL");
+        for (let i = 0; i < sizes.length; i++) {
+            console.log(sizes[i])
+            if (sizes[i] === document.querySelector(`.${form.size}`)) {
+                sizes[i].style.background = 'black';
+                sizes[i].style.color = "white"
+            }
+            else {
+                sizes[i].style.background = ""
+                sizes[i].style.color = ""
+            }
+        }
+    })
 
     // Changes the show state to true, if it's false, else set to true
     const toggleShow = () => {
@@ -73,6 +89,7 @@ export default function TopSection({id, cart, addToCart}) {
                 size: size
             }
         )
+
         toggleShow()
     }
 
@@ -113,12 +130,12 @@ export default function TopSection({id, cart, addToCart}) {
                     {show ? (
                         <div className="sizeDropdown">
                             <ul>
-                                <li onClick={() => selectSize("XS")}>XS</li>
-                                <li onClick={() => selectSize("S")}>S</li>
-                                <li onClick={() => selectSize("M")}>M</li>
-                                <li onClick={() => selectSize("L")}>L</li>
-                                <li onClick={() => selectSize("XL")}>XL</li>
-                                <li onClick={() => selectSize("XXL")}>XXL</li>
+                                <li className="XS" onClick={() => selectSize("XS")}>XS</li>
+                                <li className="S" onClick={() => selectSize("S")}>S</li>
+                                <li className="M" onClick={() => selectSize("M")}>M</li>
+                                <li className="L" onClick={() => selectSize("L")}>L</li>
+                                <li className="XL" onClick={() => selectSize("XL")}>XL</li>
+                                <li className="XXL" onClick={() => selectSize("XXL")}>XXL</li>
                             </ul>
                             <div className="dropdown-bg" onClick={()=> toggleShow()}></div>
                         </div>

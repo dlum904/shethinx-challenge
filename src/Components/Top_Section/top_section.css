@@ -91,7 +91,7 @@
     cursor: pointer;
 }
 .size-btn:active {
-        background-color: black;
+    background-color: black;
     color: white;
 }
 .sizeDropdown {
@@ -115,7 +115,7 @@
     text-align: center;
     
 }
-.sizeDropdown ul li:hover {
+.XS:hover, .S:hover, .M:hover, .L:hover, .XL:hover, .XXL:hover {
     color: white;
     background-color: black;
     cursor: pointer;
