@@ -1,9 +1,8 @@
 import './top_nav.css';
 import React from 'react';
 
-import { PRODUCTS } from '../../App.js'
 
-// This will be the top middle nav bar that has a position absolute
+// This will be the top middle nav bar that has a position fixed to the top
 export default function Topbar({cart}) {
     return (
         <div className="topbar">

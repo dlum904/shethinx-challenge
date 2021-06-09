@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 import TopBar from './Components/Top_bar/top_nav.js'
 import TopSection from './Components/Top_Section/top_section.js'
@@ -30,7 +30,7 @@ export const PRODUCTS = {
   },
   3: {
     id: 3,
-    name: "Chesky",
+    name: "Cheeky",
     img: "/assets/bottom section images/thinx_productpage_-03.jpg",
     price: "$35.00",
     colors: ["black", "beige"],
@@ -83,8 +83,8 @@ function App() {
     const [cart, setCart] = useState([]);
 
     // adding items to the cart
-    const addToCart = (productId) => {
-        const newCart = [...cart, [productId]];
+    const addToCart = (product) => {
+        const newCart = [...cart, [product]];
         setCart(newCart);
     }
 

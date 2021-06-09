@@ -6,8 +6,8 @@
 }
 
 .other-img {
-    max-width: 35vw;
-    max-height: 75vh;
+    max-width: 30vw;
+    max-height: 65vh;
     cursor: zoom-in;
 }
 .other-name {
@@ -30,7 +30,7 @@
     cursor: zoom-out;
 }
 .modal-img {
-display: block;
+    display: block;
     margin-left: auto;
     margin-right: auto;
     width: 65vw;

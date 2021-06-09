@@ -4,14 +4,12 @@ import React, {useState} from 'react';
 import { PRODUCTS } from '../../App.js'
 // This will be the other products
 export default function BottomSection({ids}) {
-    console.log(ids)
 
     // hook to show modal
     const [modal, setModal] = useState(false);
 
     // toggles the modal on and off
     const toggleModal = (id) => {
-        console.log(modal)
         !modal ? setModal(id) : setModal(false);
     }
     return (
