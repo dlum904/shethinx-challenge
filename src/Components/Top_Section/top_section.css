@@ -1,5 +1,31 @@
+.product-info {
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+}
+.product-left {
+    width: 33vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.product-left p {
+    width: 20rem;
+    line-height: 2rem;
+}
+.product-mid {
+    width: 33vw;
+}
+.product-right {
+    /* margin-left: 5rem; */
+    width: 33vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-/* color selector */
+}
+/* COLOR SELECTOR */
 
 .color-select {
     display: flex;
@@ -25,7 +51,7 @@
     cursor: pointer;
 }
 
-/* quantity selector */
+/* QUANTITY SELECTOR */
 
 .quantity-select {
     display: flex;
@@ -41,6 +67,10 @@
 .minus:hover, .plus:hover {
     cursor: pointer;
 }
+.minus:active, .plus:active {
+    background-color: black;
+    color: white;
+}
 .quantity-select div {
     padding: .5rem 1rem .5rem 1rem;
     border-top: .01rem solid black;
@@ -50,6 +80,7 @@
 }
 
 /* SIZE SELECTOR */
+
 .size-btn {
     display: flex;
     width: 17.8rem;
@@ -60,6 +91,10 @@
 .size-btn:hover {
     cursor: pointer;
 }
+.size-btn:active {
+        background-color: black;
+    color: white;
+}
 .sizeDropdown {
     position: relative;
 }
@@ -67,10 +102,25 @@
     z-index: 9;
     position: absolute;
     list-style-type: none;
-    margin-top: 0;
-    margin-left: -2.55rem;
-    width: 20rem;
+    padding-left: 0rem;
+    margin-top: 0rem;
+    width: 19.99rem;
+    margin-left: -9.98rem;
     
+}
+.sizeDropdown ul li {
+    border-bottom: .01rem solid black;
+    border-right: .01rem solid black;
+    border-left: .01rem solid black;
+    padding: .5rem 0rem .5rem 0rem;
+    background-color: white;
+    text-align: center;
+    
+}
+.sizeDropdown ul li:hover {
+    color: white;
+    background-color: black;
+    cursor: pointer;
 }
 .dropdown-bg {
   position: fixed;
@@ -80,16 +130,31 @@
   width: 100vw;
   z-index: 1;
 }
-.sizeDropdown ul li {
-    border-bottom: .01rem solid black;
-    border-right: .01rem solid black;
-    border-left: .01rem solid black;
+
+/* ADD TO CART BUTTON  */
+.cart-btn {
+    border: .01rem solid black;
     padding: .5rem 1rem .5rem 1rem;
-    background-color: white;
-    text-align: center;
-}
-.sizeDropdown ul li:hover {
-    color: white;
+    width: 19.9rem;
     background-color: black;
+    color: white;
+}
+.cart-btn:hover {
+    background-color: white;
+    color: black;
     cursor: pointer;
+}
+.cart-btn:active {
+    background-color: black;
+    color: white;
+}
+.price {
+    width: 20rem;
+    /* align-self: start;
+    margin-left: 2rem; */
+}
+.whatsize {
+    width: 20rem;
+    /* align-self: start;
+    margin-left: 2rem; */
 }

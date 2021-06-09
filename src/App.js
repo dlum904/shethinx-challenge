@@ -15,7 +15,7 @@ export const PRODUCTS = {
     price: "$35.00",
     colors: ["black", "beige"],
     size: ["XS", "S", "M", "L", "XL"],
-    desc1: "Heavy Days",
+    desc1: "Heavy Days.  Holds up to 2 tampon's worth.",
     desc2: "The phrase 'treat yo'self' reaches new belly-button brushing heights with the Hi-Waist, and it's here just in time for cuffling season.",
   },
   2: {
@@ -30,8 +30,8 @@ export const PRODUCTS = {
   },
   3: {
     id: 3,
-    name: "Thong",
-    img: "/assets/bottom section images/thinx_productpage_-05.jpg",
+    name: "Chesky",
+    img: "/assets/bottom section images/thinx_productpage_-03.jpg",
     price: "$35.00",
     colors: ["black", "beige"],
     size: ["XS", "S", "M", "L", "XL"],
@@ -40,6 +40,16 @@ export const PRODUCTS = {
   },
   4: {
     id: 4,
+    name: "Thong",
+    img: "/assets/bottom section images/thinx_productpage_-05.jpg",
+    price: "$35.00",
+    colors: ["black", "beige"],
+    size: ["XS", "S", "M", "L", "XL"],
+    desc1: "Light Days",
+    desc2: "Thong desc here.",
+  },
+  5: {
+    id: 5,
     name: "Sport",
     img: "/assets/bottom section images/thinx_productpage_-07.jpg",
     price: "$35.00",
@@ -48,8 +58,8 @@ export const PRODUCTS = {
     desc1: "Medium Days",
     desc2: "Sport desc here.",
   },
-  5: {
-    id: 5,
+  6: {
+    id: 6,
     name: "Boyshort",
     img: "/assets/bottom section images/thinx_productpage_-08.jpg",
     price: "$35.00",
@@ -66,7 +76,8 @@ function App() {
         PRODUCTS[2].id,
         PRODUCTS[3].id,
         PRODUCTS[4].id,
-        PRODUCTS[5].id
+        PRODUCTS[5].id,
+        PRODUCTS[6].id
     ];
     // useState hook for the Cart
     const [cart, setCart] = useState([]);
@@ -78,9 +89,11 @@ function App() {
     }
 
     return (
-        <div className="app">
+        <div className="App">
         <TopBar cart={cart}/>
+        <br/>
         <TopSection id={mainProductId} cart={cart} addToCart={addToCart} />
+        <br />
         <BottomSection ids={otherProductIds} />
         </div>
     );

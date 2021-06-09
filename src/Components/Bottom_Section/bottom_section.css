@@ -1,0 +1,43 @@
+
+.top-row, .mid-row, .bottom-row {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.other-img {
+    max-width: 35vw;
+    max-height: 75vh;
+    cursor: zoom-in;
+}
+.other-name {
+    text-decoration: underline;
+}
+.other-desc1 {
+    font-size: .65rem;
+}
+
+.modal {
+    overflow-y: auto;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 9;
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+    max-height: min-content;
+    cursor: zoom-out;
+}
+.modal-img {
+display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 65vw;
+}
+#close {
+    position: absolute;
+    right: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+}

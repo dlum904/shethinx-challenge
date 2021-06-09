@@ -1,5 +1,5 @@
 import './top_section.css';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { PRODUCTS } from '../../App.js'
 
 // This will be the main body/product that's being viewed
@@ -16,7 +16,7 @@ export default function TopSection({id, cart, addToCart}) {
     );
 
     // Hook to show the size dropdown: if set to false, it will not show, if true it will show it
-    const [show, setShow] = useState(false)
+    const [show, setShow] = useState(false);
 
     // Changes the show state to true, if it's false, else set to true
     const toggleShow = () => {
@@ -80,7 +80,7 @@ export default function TopSection({id, cart, addToCart}) {
 
     return (
         <div className="top-section">
-            main product here
+
             <div className="product-info">
                 {/* Left side with all the product descriptions */}
                 <div className="product-left">
@@ -92,8 +92,7 @@ export default function TopSection({id, cart, addToCart}) {
                 <img className="product-mid" src={PRODUCTS[id].img} alt="pic" />
                 {/* Right side with all the selectors */}
                 <div className="product-right">
-                    <p>{PRODUCTS[id].price}</p>
-                    <form>
+                    <p className="price">{PRODUCTS[id].price}</p>
                         {/* COLOR SELECT */}
                         <div className="color-select">
                             <div className="color">color</div>
@@ -128,11 +127,11 @@ export default function TopSection({id, cart, addToCart}) {
                         ) :
                         null }
                         <br/>
-                        <a href="/">what's my size?</a>
+                        <a className="whatsize" href="/">what's my size?</a>
                         <br/>
-                        <br/>
-                        <input type="button" onClick={() => addToCart(id)} value="add to cart"/>
-                    </form>
+                        {/* ADD TO CART BTN */}
+                        {/* TODO: add the entire form to the cart */}
+                        <input className="cart-btn" type="button" onClick={() => addToCart(id)} value="add to cart"/>
                 </div>
 
             </div>
