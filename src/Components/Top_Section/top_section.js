@@ -18,11 +18,10 @@ export default function TopSection({id, cart, addToCart}) {
     // Hook to show the size dropdown: if set to false, it will not show, if true it will show it
     const [show, setShow] = useState(false);
 
-    // Hook to show what size is currently selected
+    // Hook to show what size is currently selected.  changes background for the size that's in the form state.
     useEffect (() => {
         const sizes = document.querySelectorAll(".XS, .S, .M, .L, .XL, .XXL");
         for (let i = 0; i < sizes.length; i++) {
-            console.log(sizes[i])
             if (sizes[i] === document.querySelector(`.${form.size}`)) {
                 sizes[i].style.background = 'black';
                 sizes[i].style.color = "white"
